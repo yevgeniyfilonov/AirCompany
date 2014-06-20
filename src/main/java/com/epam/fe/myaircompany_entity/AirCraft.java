@@ -6,7 +6,7 @@ public abstract class AirCraft {
     private int rangeflight;//поле дальность полёта
     private int flightspeed;//поле скорость
 
-    protected AirCraft(String name, int rangeflight, int flightspeed) {
+    protected AirCraft() {
         this.name = name;
         this.rangeflight = rangeflight;
         this.flightspeed = flightspeed;
@@ -36,5 +36,5 @@ public abstract class AirCraft {
     public void setFlightspeed(int flightspeed) {
         this.flightspeed = flightspeed;
     }
-    this.
+
 }

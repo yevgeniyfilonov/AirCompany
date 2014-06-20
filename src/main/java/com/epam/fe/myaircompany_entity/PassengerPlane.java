@@ -2,7 +2,17 @@ package com.epam.fe.myaircompany_entity;
 
 public class PassengerPlane extends AirCraft {
 
-    private  int passengerNumber;
+
+    private int passengerNumber;
+
+    private PassengerPlane(PassengerPlane builder) {
+        super();
+        passengerNumber = builder.passengerNumber;
+        setName(builder.getName());
+        setRangeflight(builder.getRangeflight());
+        setFlightspeed(builder.getFlightspeed());
+
+    }
 
     public int getPassengerNumber() {
         return passengerNumber;
@@ -12,16 +22,10 @@ public class PassengerPlane extends AirCraft {
         this.passengerNumber = passengerNumber;
     }
 
-    public PassengerPlane build(){
-        return  new PassengerPlane(th is);
+    public PassengerPlane build() {
+        return new PassengerPlane(this);
     }
-    private PassengerPlane(PassengerPlane builder){
-        passengerNumber = builder.passengerNumber;
-        name= builder.name;
-        rangeflight=builder.rangeflight;
-        flightspeed=builder.flightspeed;
 
-    }
     public static class Builder {
         private int passengerNumber;
         private String name = null;
@@ -42,6 +46,7 @@ public class PassengerPlane extends AirCraft {
             rangeflight = val;
             return this;
         }
+
         public Builder flightspeed(int val) {
             flightspeed = val;
             return this;
