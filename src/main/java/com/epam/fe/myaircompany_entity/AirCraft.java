@@ -1,10 +1,9 @@
 package com.epam.fe.myaircompany_entity;
-
-//абстрактный класс для самолётов
+                                                //абстрактный класс для самолётов
 public abstract class AirCraft {
     private String name;
-    private int rangeflight;//поле дальность полёта
-    private int flightspeed;//поле скорость
+    private int rangeflight;                   //поле дальность полёта
+    private int flightspeed;                   //поле скорость
 
     protected AirCraft() {
         this.name = name;
@@ -15,6 +14,12 @@ public abstract class AirCraft {
     public String getName() {
 
         return name;
+    }
+
+    protected AirCraft(String name, int rangeflight, int flightspeed) {
+        this.name = name;
+        this.rangeflight = rangeflight;
+        this.flightspeed = flightspeed;
     }
 
     public void setName(String name) {
